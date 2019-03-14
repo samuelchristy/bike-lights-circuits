@@ -4,26 +4,25 @@
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="10" altunitdist="mil" altunit="mil"/>
+<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="no" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="no" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="no" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="no" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="no" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="no" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -53,17 +52,17 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="yes"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
@@ -159,9 +158,25 @@
 </layers>
 <board>
 <plain>
-<circle x="28" y="23" radius="11.049" width="0.1524" layer="20"/>
+<wire x1="11.049" y1="0" x2="0" y2="11.049" width="0.254" layer="20" curve="-90"/>
+<wire x1="0" y1="11.049" x2="11.049" y2="22.098" width="0.254" layer="20" curve="-90"/>
+<wire x1="11.049" y1="22.098" x2="22.098" y2="11.049" width="0.254" layer="20" curve="-90"/>
+<wire x1="22.098" y1="11.049" x2="11.049" y2="0" width="0.254" layer="20" curve="-90"/>
+<hole x="10.668" y="11.43" drill="1.016"/>
 </plain>
 <libraries>
+<library name="christy">
+<packages>
+<package name="CAP_1UF_DGH">
+<pad name="P$1" x="-5.8166" y="0" drill="1.016" diameter="1.651" shape="long" rot="R270"/>
+<pad name="P$2" x="5.8166" y="0" drill="1.016" diameter="1.651" shape="long" rot="R270"/>
+<wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.127" layer="21"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="7.62" y1="-2.54" x2="-7.62" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="2.54" width="0.127" layer="21"/>
+</package>
+</packages>
+</library>
 <library name="diode" urn="urn:adsk.eagle:library:210">
 <description>&lt;b&gt;Diodes&lt;/b&gt;&lt;p&gt;
 Based on the following sources:
@@ -200,6 +215,100 @@ Method 2026
 Source: http://www.kingtronics.com/SMD_M7/M7_SMD_4007.pdf</description>
 <packageinstances>
 <packageinstance name="DO-214AC"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
+<library name="testpad" urn="urn:adsk.eagle:library:385">
+<description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
+Cream on SMD OFF.&lt;br&gt;
+new: Attribute TP_SIGNAL_NAME&lt;br&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="P1-13Y" urn="urn:adsk.eagle:footprint:27903/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="0" y="0" radius="0.762" width="0.1524" layer="51"/>
+<pad name="TP" x="0" y="0" drill="1.3208" diameter="1.905" shape="long" rot="R90"/>
+<text x="-0.889" y="2.159" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-3.81" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="P1-13Y" urn="urn:adsk.eagle:package:27947/1" type="box" library_version="1">
+<description>TEST PAD</description>
+<packageinstances>
+<packageinstance name="P1-13Y"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
+<library name="led" urn="urn:adsk.eagle:library:259">
+<description>&lt;b&gt;LEDs&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;br&gt;
+Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternational.com&amp;gt;&lt;/author&gt; with DUOLED</description>
+<packages>
+<package name="Z-POWER-LED-PCB-TYPE" urn="urn:adsk.eagle:footprint:15765/1" library_version="2">
+<description>&lt;b&gt;Z-Power LED&lt;/b&gt;&lt;p&gt;
+Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
+<wire x1="3.55" y1="1.475" x2="3.55" y2="-1.475" width="0.3" layer="21"/>
+<wire x1="3.55" y1="-1.475" x2="-3.55" y2="-1.475" width="0.3" layer="21" curve="-135.131159"/>
+<wire x1="-3.55" y1="-1.475" x2="-3.55" y2="1.475" width="0.3" layer="21"/>
+<wire x1="-3.55" y1="1.475" x2="3.55" y2="1.475" width="0.3" layer="21" curve="-135.136675"/>
+<wire x1="-1.55" y1="10.475" x2="-1.55" y2="9.5" width="0.2032" layer="21"/>
+<wire x1="1.55" y1="10.475" x2="1.55" y2="9.5" width="0.2032" layer="21"/>
+<wire x1="1.55" y1="9.5" x2="-1.55" y2="9.5" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-8.2966" y1="-6.5798" x2="-7.4522" y2="-6.0923" width="0.2032" layer="21"/>
+<wire x1="-9.8466" y1="-3.8951" x2="-9.0022" y2="-3.4076" width="0.2032" layer="21"/>
+<wire x1="-9.0022" y1="-3.4076" x2="-7.4522" y2="-6.0923" width="0.2032" layer="21" curve="-180"/>
+<wire x1="9.8466" y1="-3.8951" x2="9.0022" y2="-3.4076" width="0.2032" layer="21"/>
+<wire x1="8.2966" y1="-6.5798" x2="7.4522" y2="-6.0923" width="0.2032" layer="21"/>
+<wire x1="7.4522" y1="-6.0923" x2="9.0022" y2="-3.4076" width="0.2032" layer="21" curve="-180"/>
+<wire x1="1.55" y1="-10.475" x2="1.55" y2="-9.5" width="0.2032" layer="21"/>
+<wire x1="-1.55" y1="-10.475" x2="-1.55" y2="-9.5" width="0.2032" layer="21"/>
+<wire x1="-1.55" y1="-9.5" x2="1.55" y2="-9.5" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-9.8466" y1="3.8951" x2="-9.0022" y2="3.4076" width="0.2032" layer="21"/>
+<wire x1="-8.2966" y1="6.5798" x2="-7.4522" y2="6.0923" width="0.2032" layer="21"/>
+<wire x1="-7.4522" y1="6.0923" x2="-9.0022" y2="3.4076" width="0.2032" layer="21" curve="-180"/>
+<wire x1="8.2966" y1="6.5798" x2="7.4522" y2="6.0923" width="0.2032" layer="21"/>
+<wire x1="9.8466" y1="3.8951" x2="9.0022" y2="3.4076" width="0.2032" layer="21"/>
+<wire x1="9.0022" y1="3.4076" x2="7.4522" y2="6.0923" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-8.3" y1="6.575" x2="-1.55" y2="10.475" width="0.2032" layer="21"/>
+<wire x1="1.55" y1="10.475" x2="8.3" y2="6.575" width="0.2032" layer="21"/>
+<wire x1="8.3" y1="-6.575" x2="1.55" y2="-10.475" width="0.2032" layer="21"/>
+<wire x1="-1.55" y1="-10.475" x2="-8.3" y2="-6.575" width="0.2032" layer="21"/>
+<wire x1="-9.85" y1="-3.9" x2="-9.85" y2="3.9" width="0.2032" layer="21"/>
+<wire x1="9.85" y1="-3.9" x2="9.85" y2="3.9" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="3.2" width="0" layer="29"/>
+<circle x="0" y="0" radius="3" width="0" layer="31"/>
+<smd name="A" x="-6.65" y="-1.12" dx="3.3" dy="2.1" layer="1"/>
+<smd name="C" x="6.65" y="1.12" dx="3.3" dy="2.1" layer="1"/>
+<text x="-2.54" y="4.445" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-5.715" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="3.625" y1="0.75" x2="5.625" y2="1.45" layer="51" rot="R180"/>
+<rectangle x1="-7.25" y1="-1.85" x2="-5.625" y2="-0.35" layer="51"/>
+<rectangle x1="5.625" y1="0.35" x2="7.25" y2="1.85" layer="51" rot="R180"/>
+<rectangle x1="-4.5" y1="0.75" x2="-3.55" y2="1.45" layer="21"/>
+<rectangle x1="-5.625" y1="-1.45" x2="-3.525" y2="-0.75" layer="51"/>
+<rectangle x1="-4.7" y1="-1.45" x2="-3.525" y2="-0.75" layer="21"/>
+<rectangle x1="3.5" y1="0.75" x2="4.675" y2="1.45" layer="21"/>
+<polygon width="0.1" layer="21">
+<vertex x="3.65" y="-0.8"/>
+<vertex x="4.45" y="-0.8"/>
+<vertex x="4.45" y="-0.85" curve="186.025575"/>
+<vertex x="4.45" y="-1.325"/>
+<vertex x="4.45" y="-1.4"/>
+<vertex x="3.65" y="-1.4"/>
+</polygon>
+</package>
+</packages>
+<packages3d>
+<package3d name="Z-POWER-LED-PCB-TYPE" urn="urn:adsk.eagle:package:15885/1" type="box" library_version="2">
+<description>Z-Power LED
+Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
+<packageinstances>
+<packageinstance name="Z-POWER-LED-PCB-TYPE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1281,111 +1390,6 @@ MELF 0.25 W</description>
 </package3d>
 </packages3d>
 </library>
-<library name="testpad" urn="urn:adsk.eagle:library:385">
-<description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
-Cream on SMD OFF.&lt;br&gt;
-new: Attribute TP_SIGNAL_NAME&lt;br&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="P1-13Y" urn="urn:adsk.eagle:footprint:27903/1" library_version="1">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<circle x="0" y="0" radius="0.762" width="0.1524" layer="51"/>
-<pad name="TP" x="0" y="0" drill="1.3208" diameter="1.905" shape="long" rot="R90"/>
-<text x="-0.889" y="2.159" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="-1.27" y="-3.81" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
-<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="P1-13Y" urn="urn:adsk.eagle:package:27947/1" type="box" library_version="1">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="P1-13Y"/>
-</packageinstances>
-</package3d>
-</packages3d>
-</library>
-<library name="christy">
-<packages>
-<package name="SUPERCAP5.5_1F">
-<pad name="P$1" x="-2.54" y="0" drill="1.016" diameter="1.651" shape="long" rot="R90"/>
-<pad name="P$2" x="2.54" y="0" drill="1.016" diameter="1.651" shape="long" rot="R90"/>
-<circle x="0" y="0" radius="10.668" width="0.127" layer="21"/>
-<text x="-16.51" y="8.89" size="1.27" layer="25">&gt;NAME</text>
-<text x="-16.51" y="6.35" size="1.27" layer="25">&gt;VALUE</text>
-</package>
-</packages>
-</library>
-<library name="led" urn="urn:adsk.eagle:library:259">
-<description>&lt;b&gt;LEDs&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;br&gt;
-Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternational.com&amp;gt;&lt;/author&gt; with DUOLED</description>
-<packages>
-<package name="Z-POWER-LED-PCB-TYPE" urn="urn:adsk.eagle:footprint:15765/1" library_version="2">
-<description>&lt;b&gt;Z-Power LED&lt;/b&gt;&lt;p&gt;
-Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
-<wire x1="3.55" y1="1.475" x2="3.55" y2="-1.475" width="0.3" layer="21"/>
-<wire x1="3.55" y1="-1.475" x2="-3.55" y2="-1.475" width="0.3" layer="21" curve="-135.131159"/>
-<wire x1="-3.55" y1="-1.475" x2="-3.55" y2="1.475" width="0.3" layer="21"/>
-<wire x1="-3.55" y1="1.475" x2="3.55" y2="1.475" width="0.3" layer="21" curve="-135.136675"/>
-<wire x1="-1.55" y1="10.475" x2="-1.55" y2="9.5" width="0.2032" layer="21"/>
-<wire x1="1.55" y1="10.475" x2="1.55" y2="9.5" width="0.2032" layer="21"/>
-<wire x1="1.55" y1="9.5" x2="-1.55" y2="9.5" width="0.2032" layer="21" curve="-180"/>
-<wire x1="-8.2966" y1="-6.5798" x2="-7.4522" y2="-6.0923" width="0.2032" layer="21"/>
-<wire x1="-9.8466" y1="-3.8951" x2="-9.0022" y2="-3.4076" width="0.2032" layer="21"/>
-<wire x1="-9.0022" y1="-3.4076" x2="-7.4522" y2="-6.0923" width="0.2032" layer="21" curve="-180"/>
-<wire x1="9.8466" y1="-3.8951" x2="9.0022" y2="-3.4076" width="0.2032" layer="21"/>
-<wire x1="8.2966" y1="-6.5798" x2="7.4522" y2="-6.0923" width="0.2032" layer="21"/>
-<wire x1="7.4522" y1="-6.0923" x2="9.0022" y2="-3.4076" width="0.2032" layer="21" curve="-180"/>
-<wire x1="1.55" y1="-10.475" x2="1.55" y2="-9.5" width="0.2032" layer="21"/>
-<wire x1="-1.55" y1="-10.475" x2="-1.55" y2="-9.5" width="0.2032" layer="21"/>
-<wire x1="-1.55" y1="-9.5" x2="1.55" y2="-9.5" width="0.2032" layer="21" curve="-180"/>
-<wire x1="-9.8466" y1="3.8951" x2="-9.0022" y2="3.4076" width="0.2032" layer="21"/>
-<wire x1="-8.2966" y1="6.5798" x2="-7.4522" y2="6.0923" width="0.2032" layer="21"/>
-<wire x1="-7.4522" y1="6.0923" x2="-9.0022" y2="3.4076" width="0.2032" layer="21" curve="-180"/>
-<wire x1="8.2966" y1="6.5798" x2="7.4522" y2="6.0923" width="0.2032" layer="21"/>
-<wire x1="9.8466" y1="3.8951" x2="9.0022" y2="3.4076" width="0.2032" layer="21"/>
-<wire x1="9.0022" y1="3.4076" x2="7.4522" y2="6.0923" width="0.2032" layer="21" curve="-180"/>
-<wire x1="-8.3" y1="6.575" x2="-1.55" y2="10.475" width="0.2032" layer="21"/>
-<wire x1="1.55" y1="10.475" x2="8.3" y2="6.575" width="0.2032" layer="21"/>
-<wire x1="8.3" y1="-6.575" x2="1.55" y2="-10.475" width="0.2032" layer="21"/>
-<wire x1="-1.55" y1="-10.475" x2="-8.3" y2="-6.575" width="0.2032" layer="21"/>
-<wire x1="-9.85" y1="-3.9" x2="-9.85" y2="3.9" width="0.2032" layer="21"/>
-<wire x1="9.85" y1="-3.9" x2="9.85" y2="3.9" width="0.2032" layer="21"/>
-<circle x="0" y="0" radius="3.2" width="0" layer="29"/>
-<circle x="0" y="0" radius="3" width="0" layer="31"/>
-<smd name="A" x="-6.65" y="-1.12" dx="3.3" dy="2.1" layer="1"/>
-<smd name="C" x="6.65" y="1.12" dx="3.3" dy="2.1" layer="1"/>
-<text x="-2.54" y="4.445" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.81" y="-5.715" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="3.625" y1="0.75" x2="5.625" y2="1.45" layer="51" rot="R180"/>
-<rectangle x1="-7.25" y1="-1.85" x2="-5.625" y2="-0.35" layer="51"/>
-<rectangle x1="5.625" y1="0.35" x2="7.25" y2="1.85" layer="51" rot="R180"/>
-<rectangle x1="-4.5" y1="0.75" x2="-3.55" y2="1.45" layer="21"/>
-<rectangle x1="-5.625" y1="-1.45" x2="-3.525" y2="-0.75" layer="51"/>
-<rectangle x1="-4.7" y1="-1.45" x2="-3.525" y2="-0.75" layer="21"/>
-<rectangle x1="3.5" y1="0.75" x2="4.675" y2="1.45" layer="21"/>
-<polygon width="0.1" layer="21">
-<vertex x="3.65" y="-0.8"/>
-<vertex x="4.45" y="-0.8"/>
-<vertex x="4.45" y="-0.85" curve="186.025575"/>
-<vertex x="4.45" y="-1.325"/>
-<vertex x="4.45" y="-1.4"/>
-<vertex x="3.65" y="-1.4"/>
-</polygon>
-</package>
-</packages>
-<packages3d>
-<package3d name="Z-POWER-LED-PCB-TYPE" urn="urn:adsk.eagle:package:15885/1" type="box" library_version="2">
-<description>Z-Power LED
-Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
-<packageinstances>
-<packageinstance name="Z-POWER-LED-PCB-TYPE"/>
-</packageinstances>
-</package3d>
-</packages3d>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1396,7 +1400,7 @@ Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
 <clearance class="0" value="0.508"/>
 </class>
 </classes>
-<designrules name="OthermillDRC_1_32_v2">
+<designrules name="OthermillDRC_1_32_v2_18mil">
 <description language="en">&lt;b&gt;Othermill EAGLE Design Rules v2&lt;/b&gt;&lt;p&gt;DRC for Othermill, 1/32&quot; tool&lt;/p&gt;&lt;b&gt;-- Rules --&lt;/b&gt;&lt;li&gt;8 mil traces&lt;/li&gt;&lt;li&gt;31.26mil clearance&lt;/li&gt;</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
@@ -1415,7 +1419,7 @@ Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
 <param name="mdCopperDimension" value="0mil"/>
 <param name="mdDrill" value="1mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="8mil"/>
+<param name="msWidth" value="18mil"/>
 <param name="msDrill" value="0.8mm"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
@@ -1492,7 +1496,7 @@ Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
 <param name="PrefDir.13" value="0"/>
 <param name="PrefDir.14" value="0"/>
 <param name="PrefDir.15" value="0"/>
-<param name="PrefDir.16" value="0"/>
+<param name="PrefDir.16" value="a"/>
 <param name="cfVia" value="8"/>
 <param name="cfNonPref" value="5"/>
 <param name="cfChangeDir" value="2"/>
@@ -1567,52 +1571,80 @@ Source: http://www.seoulsemicon.co.kr .. X42182.pdf</description>
 </pass>
 </autorouter>
 <elements>
-<element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="DO-214AC" package3d_urn="urn:adsk.eagle:package:43416/2" value="" x="33.99" y="27.368" smashed="yes" rot="R270">
-<attribute name="NAME" x="34.395" y="23.408" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="30.815" y="29.908" size="1.27" layer="27" rot="R270"/>
+<element name="C1" library="christy" package="CAP_1UF_DGH" value="SUPERCAP5.5_1FDGH" x="11.176" y="4.064"/>
+<element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="DO-214AC" package3d_urn="urn:adsk.eagle:package:43416/2" value="" x="15.24" y="17.526"/>
+<element name="GND" library="testpad" library_urn="urn:adsk.eagle:library:385" package="P1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1" value="PTR1PAD1-13Y" x="10.922" y="1.778" rot="R90">
+<attribute name="TP_SIGNAL_NAME" value="" x="10.922" y="1.778" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="" x="26.798" y="29.17" smashed="yes" rot="R180">
-<attribute name="NAME" x="28.568" y="26.9" size="1.27" layer="25" rot="R180"/>
-<attribute name="SPICEPREFIX" value="R" x="26.798" y="29.17" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="28.068" y="31.71" size="1.27" layer="27" rot="R180"/>
+<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="Z-POWER-LED-PCB-TYPE" package3d_urn="urn:adsk.eagle:package:15885/1" value="Z-POWER-LED" x="10.922" y="11.176"/>
+<element name="PWR" library="testpad" library_urn="urn:adsk.eagle:library:385" package="P1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1" value="PTR1PAD1-13Y" x="10.922" y="20.574" rot="R270">
+<attribute name="TP_SIGNAL_NAME" value="" x="10.922" y="20.574" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="PWR" library="testpad" library_urn="urn:adsk.eagle:library:385" package="P1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1" value="PTR1PAD1-13Y" x="32.582" y="17.622" smashed="yes">
-<attribute name="NAME" x="26.693" y="16.281" size="1.27" layer="25" ratio="10"/>
-<attribute name="TP_SIGNAL_NAME" value="" x="31.312" y="13.812" size="1" layer="37"/>
-<attribute name="VALUE" x="32.836" y="17.622" size="0.0254" layer="27"/>
+<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="" x="5.334" y="16.002" rot="R180">
+<attribute name="SPICEPREFIX" value="R" x="5.334" y="16.002" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="GND" library="testpad" library_urn="urn:adsk.eagle:library:385" package="P1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1" value="PTR1PAD1-13Y" x="21.67" y="27.106" smashed="yes" rot="R90">
-<attribute name="NAME" x="25.783" y="26.011" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="TP_SIGNAL_NAME" value="" x="25.48" y="25.836" size="1" layer="37" rot="R90"/>
-<attribute name="VALUE" x="18.17" y="26.106" size="0.0254" layer="27" rot="R90"/>
-</element>
-<element name="C1" library="christy" package="SUPERCAP5.5_1F" value="SUPERCAP5.5_1F" x="28" y="23"/>
-<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="Z-POWER-LED-PCB-TYPE" package3d_urn="urn:adsk.eagle:package:15885/1" value="Z-POWER-LED" x="28" y="23" rot="MR0"/>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="D1" pad="C"/>
 <contactref element="R1" pad="1"/>
 <contactref element="LED1" pad="A"/>
-<wire x1="33.99" y1="29.393" x2="28.198" y2="29.17" width="0" layer="19" extent="1-1"/>
-<wire x1="34.65" y1="21.88" x2="33.99" y2="29.393" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$3">
-<contactref element="GND" pad="TP"/>
-<contactref element="C1" pad="P$2"/>
-<contactref element="LED1" pad="C"/>
-<wire x1="21.67" y1="27.106" x2="30.54" y2="23" width="0" layer="19" extent="1-1"/>
-<wire x1="21.35" y1="24.12" x2="21.67" y2="27.106" width="0" layer="19" extent="1-1"/>
+<wire x1="6.35" y1="13.335" x2="6.35" y2="14.605" width="0.508" layer="1"/>
+<wire x1="6.35" y1="14.605" x2="6.35" y2="15.875" width="0.508" layer="1"/>
+<wire x1="4.445" y1="11.43" x2="6.35" y2="13.335" width="0.508" layer="1"/>
+<wire x1="4.445" y1="10.16" x2="4.445" y2="11.43" width="0.508" layer="1"/>
+<wire x1="6.35" y1="15.875" x2="6.734" y2="16.002" width="0.508" layer="1"/>
+<wire x1="4.445" y1="10.16" x2="4.272" y2="10.056" width="0.508" layer="1"/>
+<wire x1="8.255" y1="17.145" x2="12.7" y2="17.145" width="0.508" layer="1"/>
+<wire x1="8.255" y1="16.51" x2="8.255" y2="17.145" width="0.508" layer="1"/>
+<wire x1="6.35" y1="14.605" x2="8.255" y2="16.51" width="0.508" layer="1"/>
+<wire x1="12.7" y1="17.145" x2="13.215" y2="17.526" width="0.508" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="D1" pad="A"/>
 <contactref element="PWR" pad="TP"/>
-<wire x1="32.582" y1="17.622" x2="33.99" y2="25.343" width="0" layer="19" extent="1-1"/>
+<wire x1="13.97" y1="20.955" x2="17.145" y2="17.78" width="0.508" layer="1"/>
+<wire x1="11.43" y1="20.955" x2="13.97" y2="20.955" width="0.508" layer="1"/>
+<wire x1="17.145" y1="17.78" x2="17.265" y2="17.526" width="0.508" layer="1"/>
+<wire x1="11.43" y1="20.955" x2="10.922" y2="20.574" width="0.508" layer="1"/>
 </signal>
 <signal name="N$5">
 <contactref element="C1" pad="P$1"/>
 <contactref element="R1" pad="2"/>
-<wire x1="25.46" y1="23" x2="25.398" y2="29.17" width="0" layer="19" extent="1-1"/>
+<wire x1="0.635" y1="12.7" x2="3.81" y2="15.875" width="0.508" layer="1"/>
+<wire x1="0.635" y1="9.525" x2="0.635" y2="12.7" width="0.508" layer="1"/>
+<wire x1="5.08" y1="5.08" x2="0.635" y2="9.525" width="0.508" layer="1"/>
+<wire x1="5.08" y1="4.445" x2="5.08" y2="5.08" width="0.508" layer="1"/>
+<wire x1="3.81" y1="15.875" x2="3.934" y2="16.002" width="0.508" layer="1"/>
+<wire x1="5.08" y1="4.445" x2="5.3594" y2="4.064" width="0.508" layer="1"/>
+</signal>
+<signal name="GND">
+<contactref element="GND" pad="TP"/>
+<contactref element="C1" pad="P$2"/>
+<contactref element="LED1" pad="C"/>
+<polygon width="0.254" layer="1">
+<vertex x="0.508" y="10.922"/>
+<vertex x="0.508" y="13.97"/>
+<vertex x="6.35" y="19.812"/>
+<vertex x="7.366" y="20.828"/>
+<vertex x="14.986" y="20.828"/>
+<vertex x="21.082" y="14.732"/>
+<vertex x="21.082" y="7.874"/>
+<vertex x="14.224" y="1.016"/>
+<vertex x="7.366" y="1.016"/>
+<vertex x="1.524" y="6.858"/>
+<vertex x="0.508" y="7.874"/>
+</polygon>
+<polygon width="0.254" layer="16">
+<vertex x="0" y="11.176" curve="-90"/>
+<vertex x="10.922" y="22.098"/>
+<vertex x="11.049" y="22.098" curve="-90"/>
+<vertex x="22.098" y="11.049"/>
+<vertex x="22.098" y="10.414" curve="-90"/>
+<vertex x="11.684" y="0"/>
+<vertex x="10.922" y="0" curve="-90"/>
+<vertex x="0" y="10.922"/>
+</polygon>
 </signal>
 </signals>
 <mfgpreviewcolors>
